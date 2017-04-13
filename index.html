@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>岳贤强的个人简历</title>
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+<div id="dowebok">
+    <!-- 第一屏-->
+    <div class="section first ">
+        <div class="f-box">
+            <div class="f-img">
+                <!--<img src="images/bao-2.png" alt=""/>-->
+            </div>
+            <div class="f-per-img rubberBand bounceInDown">
+                <img src="images/per.jpg" alt=""/>
+                <div class="img-zc">
+                    <p>一名小小的前端码农</p>
+                    <p>一名全栈工程师的梦想</p>
+                </div>
+            </div>
+            <div class="f-vita">
+                <div class="line"></div>
+                <div class="vita-l">
+                    <div class="left-line"></div>
+                    <div class="left-box1">
+                        <h4 class="info1 animated bounceIn" >个人信息</h4>
+                    </div>
+                </div>
+                <div class="vita-m">
+                    <div class="mid-line"></div>
+                    <div class="mid-box2">
+                        <h4 class="info2 animated bounceIn">工作经历</h4>
+                    </div>
+                </div>
+                <div class="vita-r">
+                    <div class="right-line"></div>
+                    <div class="right-box3">
+                        <h4 class="info3 animated bounceIn">求职意向</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="f-footer">
+                <div class="zw"></div>
+                <div class="ball"></div>
+                <div class="ball-1"></div>
+                <div class="rw"></div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+    <!-- 第二屏-->
+    <div class="section second ">
+
+        <div class="s-box">
+            <div class="top">
+                <div class="top-text1">HTML/CSS</div>
+                <div class="top-text2">Javascript</div>
+                <div class="top-text3">JQuery</div>
+                <img src="images/yq0KZFX2QLiAUO_tAAAc_oJpqv4724.png" alt=""/>
+            </div>
+            <div class="topline-left"></div>
+            <div class="topline-right"></div>
+            <div class="topline-top"></div>
+            <div class="topline-bottom"></div>
+
+            <div class="s-top">
+                <img src="images/ym-24.png" alt=""/>
+            </div>
+
+            <div class="s-content">
+                <ul class="content-left" >
+                    <li><span>个</span></li>
+                    <li><span>人</span></li>
+                    <li><span>信</span></li>
+                    <li><span>息</span></li>
+                </ul>
+                <div class="content-right">
+                    <div class="right-top"></div>
+                    <div class="right-bot">
+                        <span>姓名</span> <span>岳贤强</span>
+                        <br>
+                        <span></span>
+                        <br>
+                        <span>联系电话：15910965920</span>
+                        <br>
+                        <span>邮箱：769421530@qq.com</span>
+                        <span>
+                            前端码农，熟练应用HTML、CSS、Javascript制作前端页面,
+                            有良好的代码编写习惯(代码规范强迫症)
+                        </span>
+
+                        <br>
+                        <br>
+                        <br>
+                        <span>★★★★★★小僵尸们极力推荐★★★★★★</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+    <!-- 第三屏-->
+    <div class="section third ">
+        <p>战     斗     力</p>
+        <img src="images/html.jpg" alt=""/>
+        <img src="images/h5-1.jpg" alt=""/>
+        <img src="images/Java.jpg" alt=""/>
+        <img src="images/h5-4.jpg" alt=""/>
+        <img src="images/h5-6.jpg" alt=""/>
+        <img src="images/h5-7.jpg" alt=""/>
+        <img src="images/h5-8.jpg" alt=""/>
+        <img src="images/h5-9.jpg" alt=""/>
+        <img src="images/timg%20(14).jpg" alt=""/>
+        <div class="text1">
+            <h3>2015.08~2016.05</h3>
+            <span>在XXX公司,任职前端工程师,主要从事前端页面制作,简单框架封装</span>
+        </div>
+        <div class="text2">
+            <h3>2016.06~至今</h3>
+            <span>在XXX公司,任职前端工程师,主要从事前端页面制作,移动端项目开发,前后端交互,公司常用框架封装</span>
+        </div>
+    </div>
+    <!-- 第四屏-->
+    <div class="section fourth active">
+        <span>未完待续</span>
+        <div class="four-footer">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+    <!-- 第五屏-->
+    <div class="section fifth">
+
+
+    </div>
+</div>
+
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script src="js/index.js"></script>
+
+<script>
+    $(function(){
+        //插件初始化代码
+        $('#dowebok').fullpage({
+
+            //滚动到某一屏后的回调函数, 参数index 表示当前是那一屏
+            afterLoad:function(link,index){
+
+                    $('.section').removeClass('current');
+                    //代码的目的 让第一屏刷新时有动画
+                    setTimeout(function(){
+                        $('.section').eq(index-1).addClass('current');
+                    },100);
+                }
+        });
+    });
+</script>
+
+</body>
+</html>
